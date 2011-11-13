@@ -1,0 +1,2 @@
+spec/javascripts/*_spec.js
+public/javascripts/compiled/
