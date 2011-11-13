@@ -34,7 +34,7 @@ class RomanNumerals
     token = /[MDLV]|C[MD]?|X[CL]?|I[XV]?/g
     number = 0
 
-    while m = token.exec(roman)
-      number += this.numerals_to_values[m[0]];
+    while match = token.exec(roman)
+      number += this.numerals_to_values[match[0]];
 
     return number
