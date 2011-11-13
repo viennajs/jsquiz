@@ -30,5 +30,8 @@ describe 'RomanNumerals:', ->
     it 'should return 291 when given CCXCI', ->
       expect(RomanNumerals.convert('CCXCI')).toEqual(291)
 
-    # it 'should throw an error if the number is too big', ->
-    # it 'should throw an error if the number is negative', ->
+    it 'should throw an error if the number is too big', ->
+      expect(-> RomanNumerals.convert(4000)).toThrow("Number `4000' is too small or too big. Must be bigger than 0 and smaller than 4000")
+
+    it 'should throw an error if the number is negative', ->
+      expect(-> RomanNumerals.convert(-1)).toThrow("Number `-1' is too small or too big. Must be bigger than 0 and smaller than 4000")
