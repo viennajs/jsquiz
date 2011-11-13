@@ -10,7 +10,7 @@
 ### should return:
 
     4
-    IC
+    XCIX
     1942
     MMCDI
 
