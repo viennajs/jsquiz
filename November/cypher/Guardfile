@@ -1,7 +1,7 @@
-guard 'coffeescript', :output => 'public/javascripts/compiled', :bare => true do
+guard 'coffeescript', :output => 'public/javascripts/compiled' do
   watch(%r{^app/coffeescripts/(.*)\.coffee})
 end
 
-guard 'coffeescript', :output => 'spec/javascripts', :bare => true do
+guard 'coffeescript', :output => 'spec/javascripts' do
   watch(%r{^spec/coffeescripts/(.*)\.coffee})
 end
