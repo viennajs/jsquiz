@@ -48,7 +48,7 @@
 				},
 				int_to_roman = function(num) {
 					var i, digit, pot, result = "", num_ms = 0,
-						re = [/o/i, /f/i, /t/i], templ;
+						re = [/o/g, /f/g, /t/g], templ;
 					// Anything >= 1000 just becomes "M"
 					for (num_ms = Math.floor(num/1000); num_ms > 0; num_ms--) {
 						result += "M";
