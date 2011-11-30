@@ -5,11 +5,11 @@ Totally stealing again from Ruby Quiz... again
 The goal of this month's quiz will be to display LCD numbers at different sizes
 
 The digits to be displayed will be passed as an argument to the program.  
-Size should be controlled with the command-line option -s follow up by a positive integer. The default value for -s is 2.
+Size should be controlled with an option `s` follow up by a positive integer. The default value for `s` is 2.
 
-For example, if your program is called with:
+For example, assuming you've implemented this on the command line, if your program is called with:
 
-    lcd.rb 012345
+    lcd.js 012345
 
 The correct display is:
 
@@ -23,7 +23,7 @@ The correct display is:
 
 And for:
 
-    lcd.rb -s 1 6789
+    lcd.js -s 1 6789
 
 Your program should print:
 
