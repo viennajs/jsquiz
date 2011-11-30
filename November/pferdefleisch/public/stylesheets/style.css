@@ -1,0 +1,39 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: auto;
+}
+form {
+  width: 480px;
+  margin: 0 auto 25px;
+}
+.alert {
+  height: 50px;
+}
+a {
+  color: #00b7ff;
+}
+.btn {
+  margin-left: 17px;
+}
+#display {
+  width: auto;
+  height: 250px;
+}
+#display li {
+  float: left;
+  margin-right: 25px;
+  list-style: none;
+}
+#display li img {
+  height: 250px;
+}
+footer {
+  clear: both;
+  margin: 80px auto 0px;
+  text-align: center;
+  width: 480px;
+}
+footer h2 {
+  font-size: 90%;
+}

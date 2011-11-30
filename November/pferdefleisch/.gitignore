@@ -1,0 +1,10 @@
+.rbenv-version
+vendor/bundle/
+.bundle/
+Gemfile.lock
+bin/
+node_modules/
+.env
+Gemfile
+Gemfile.lock
+.DS_Store
