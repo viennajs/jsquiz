@@ -22,7 +22,7 @@ window.RomanNumerals = class RomanNumerals
 
     for value, numeral of this.values_to_numerals
       while number >= value
-        number -= value;
+        number -= value
         result += numeral
 
     result
