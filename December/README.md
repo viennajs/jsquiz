@@ -32,3 +32,9 @@ Your program should print:
      -       -   - 
     | |   | | |   |
      -       -   - 
+
+## Notes
+
+You do not need to produce ASCII art output, but your output should be built dynamically from some kind of source. Simply using a complete image for each digit won't fly.
+
+However, you may use an image for the individual components of the digits.
