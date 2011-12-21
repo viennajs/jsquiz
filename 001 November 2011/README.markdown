@@ -26,3 +26,7 @@
 
 ### Print it in the browser, make huge ascii output on the command line, whatever you want!
 ### Enjoy!
+
+## Notes on solutions
+
+[Peter Neumark did a blog post](http://peterneumark.com/javascript/2011-12-12/roman-numerals-in-javascript/) on his solution as well.
