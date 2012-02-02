@@ -24,3 +24,8 @@ The dice expression as BNF:
           d
           * /
           + -      lowest
+
+## Tutorials
+
+[Übersetzerbau Vorlesung der TU Wien](http://www.complang.tuwien.ac.at/ubvl/)]
+[Create your own programming language](http://createyourproglang.com/)
