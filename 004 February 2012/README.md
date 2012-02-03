@@ -29,3 +29,4 @@ The dice expression as BNF:
 
 [Übersetzerbau Vorlesung der TU Wien](http://www.complang.tuwien.ac.at/ubvl/)]
 [Create your own programming language](http://createyourproglang.com/)
+[Roy - Small Functional Language that compiles to JavaScript](https://github.com/pufuwozu/roy)
