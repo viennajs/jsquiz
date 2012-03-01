@@ -1,7 +1,7 @@
 function exec (input) {
-    console.log("Evaluating " + input)
-    return require("./diceroller").parse(input);
-    console.log("\n\n")
+    console.log("Evaluating " + input + ": ");
+    require("./diceroller").parse(input);
+    return;
 }
 
 exec("3");
@@ -17,3 +17,7 @@ exec("3 d6");
 exec("1 d2 + 1");
 exec("1 d2+1");
 exec("1d2+1");
+exec("(3d4)d5")
+exec("(5d3)d(7d6)")
+exec("(5d3)d(7d6) + 3")
+exec("((5d3)d(7d6) + 3) * 5")

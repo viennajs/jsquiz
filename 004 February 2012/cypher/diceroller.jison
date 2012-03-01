@@ -5,7 +5,7 @@
 %%
 \s+                   { /* skip whitespace */ }
 [dD]                  { return 'DICE'; }
-[0-9]+\b              { return 'INTEGER'; }
+[0-9]+                { return 'INTEGER'; }
 "*"                   { return '*'; }
 "/"                   { return '/'; }
 "-"                   { return '-'; }
@@ -27,21 +27,33 @@
 %% /* language grammar */
 
 expressions:
-    expression_list EOF             { console.log($1); return $1; }
-  ;
+      expression_list EOF                     { console.log($1); return $1; }
+    ;
 
 expression_list:
-  /* nothing */                     { $$ = 0; }
-  | expression                      { $$ = $1; }
-  ;
+    /* nothing */                             { $$ = 0; }
+    | expression                              { $$ = $1; }
+    ;
+
+dice_roll:
+      group_or_integer DICE group_or_integer  { $$ = $1 * (Math.floor(Math.random() * ($3)) + 1); }
+    | DICE group_or_integer                   { $$ = Math.floor(Math.random() * ($2)) + 1; }
+    ;
+
+group_or_integer:
+      INTEGER                                 { $$ = Number(yytext); }
+    | grouped_expr                            { $$ = $1; }
+    ;
+
+grouped_expr:
+     '(' expression ')'                       { $$ = $2; }
+    ;
 
 expression:
-      expression '+' expression     { $$ = $1 + $3; }
-    | expression '-' expression     { $$ = $1 - $3; }
-    | expression '*' expression     { $$ = $1 * $3; }
-    | expression '/' expression     { $$ = $1 / $3; }
-    | expression DICE expression    { $$ = $1 * (Math.floor(Math.random() * ($3)) + 1); }
-    | DICE expression               { $$ = Math.floor(Math.random() * ($2)) + 1; }
-    | '(' expression ')'            { $$ = $2; }
-    | INTEGER                       { $$ = Number(yytext); }
+      expression '+' expression               { $$ = $1 + $3; }
+    | expression '-' expression               { $$ = $1 - $3; }
+    | expression '*' expression               { $$ = $1 * $3; }
+    | expression '/' expression               { $$ = $1 / $3; }
+    | dice_roll                               { $$ = $1; }
+    | group_or_integer                        { $$ = $1; }
     ;
