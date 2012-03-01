@@ -53,7 +53,7 @@ expression:
       expression '+' expression               { $$ = $1 + $3; }
     | expression '-' expression               { $$ = $1 - $3; }
     | expression '*' expression               { $$ = $1 * $3; }
-    | expression '/' expression               { $$ = $1 / $3; }
+    | expression '/' expression               { $$ = Math.floor($1 / $3); }
     | dice_roll                               { $$ = $1; }
     | group_or_integer                        { $$ = $1; }
     ;
